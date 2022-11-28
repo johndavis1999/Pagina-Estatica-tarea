@@ -1,0 +1,103 @@
+/*Contenido*/
+main {
+	width: 100%;
+	max-width: 1560px;
+	margin: auto;
+	padding-bottom: 100px;
+}
+.item {
+	height: 450px;
+	padding-bottom: 20px 6px;
+	margin-bottom: 20px;
+	outline: 5px solid transparent;
+	outline-offset: -2px;
+	border-radius: 10px;
+	float: left;
+	cursor: context-menu;
+	overflow: hidden;
+	transition-property: background-color color outline;
+	transition-duration: .2s;
+}
+.item img {
+	width: 100%;
+	height: 250px;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+}
+.item p {
+	width: 100%;
+	height: 100px;
+	overflow: auto;
+}
+
+.adquirir::before { content: 'Adquirir item'; }
+.comentarios::before { content: 'Mostrar Comentarios'; }
+.adquirir, .comentarios {
+	position: relative;
+	margin: 5px;
+	font-size: 22px;
+	color: var(--texto);
+	background-color: var(--fondo);
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	opacity: 0;
+}
+.adquirir {
+	top: -155px;
+	float: left;
+}
+.comentarios {
+	top: -155px;
+	float: right;
+}
+
+/*TRANSICIONES*/
+.item:hover {
+	background-color: var(--fondo-2);
+	color: var(--texto-2);
+	outline: 5px solid var(--outline);
+}
+.adquirir:hover {
+	background-color: limegreen;
+	color: var(--texto-2);
+}
+.comentarios:hover {
+	background-color: var(--fondo-2);
+	color: var(--texto-2);
+}
+.item:hover .adquirir, .item:hover .comentarios {
+	opacity: 1;
+}
+
+/*SCROLL*/
+.item p::-webkit-scrollbar {
+	width: 10px;
+}
+.item p::-webkit-scrollbar-thumb {
+	background-color: var(--fondo);
+	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

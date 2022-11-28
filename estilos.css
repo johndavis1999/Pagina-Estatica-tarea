@@ -1,0 +1,32 @@
+@import url('estilos/general.css');
+@import url('estilos/cabecera.css');
+@import url('estilos/contenido.css');
+@import url('estilos/paginacion.css');
+@import url('estilos/pie.css');
+@import url('estilos/media-queries.css');
+
+
+body {
+    background-image: url('imagenes/backdound image static.webp');
+    background-size: cover;
+    overflow-y: hidden;
+}
+nav { animation: bajar .5s .75s backwards; }
+h1 { 
+    color: black;
+    font-size: 2em; 
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    animation: subir .5s .75s backwards;
+}
+@keyframes subir {
+    from { transform: translateY(200px); }
+    to { transform: translateY(0); }
+}
+@keyframes bajar {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(0); }
+}
+
